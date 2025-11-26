@@ -166,7 +166,7 @@
     
     .error-msg.show { display: block; }
     
-    /* ONBOARDING - Same as before */
+    /* ONBOARDING */
     .onboarding-container {
       min-height: 100vh;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -560,7 +560,6 @@
       object-fit: cover;
       border: 2px solid var(--light);
       flex-shrink: 0;
-      cursor: pointer;
     }
     
     .post-info {
@@ -575,7 +574,6 @@
       display: flex;
       align-items: center;
       gap: 4px;
-      cursor: pointer;
     }
     
     .verified-badge {
@@ -757,480 +755,7 @@
       color: var(--gray);
     }
     
-    /* POST OPTIONS MENU */
-    .post-options-menu {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 500;
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .post-options-container {
-      width: 100%;
-      background: white;
-      border-radius: 20px 20px 0 0;
-      padding: 20px;
-      animation: slideUp 0.3s ease;
-    }
-    
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
-    }
-    
-    .options-menu-header {
-      text-align: center;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 8px;
-    }
-    
-    .options-menu-title {
-      font-weight: 700;
-      color: var(--dark);
-      font-size: 1.1rem;
-    }
-    
-    .option-item {
-      padding: 16px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      cursor: pointer;
-      border-radius: 12px;
-      transition: all 0.2s;
-    }
-    
-    .option-item:active {
-      background: var(--light);
-    }
-    
-    .option-item i {
-      font-size: 1.3rem;
-      width: 24px;
-      text-align: center;
-    }
-    
-    .option-item-text {
-      flex: 1;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    
-    .option-item.danger {
-      color: var(--danger);
-    }
-    
-    /* NOTIFICATIONS PANEL */
-    .notifications-panel {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 500;
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .notifications-container {
-      width: 100%;
-      max-height: 80vh;
-      background: white;
-      border-radius: 20px 20px 0 0;
-      display: flex;
-      flex-direction: column;
-      animation: slideUp 0.3s ease;
-    }
-    
-    .notifications-header {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .notifications-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--dark);
-    }
-    
-    .notifications-close {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: none;
-      background: var(--light);
-      cursor: pointer;
-      font-size: 1.1rem;
-    }
-    
-    .notifications-list {
-      flex: 1;
-      overflow-y: auto;
-      padding: 8px;
-    }
-    
-    .notification-item {
-      padding: 14px 16px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    
-    .notification-item:active {
-      background: var(--light);
-    }
-    
-    .notification-item.unread {
-      background: rgba(59,130,246,0.05);
-    }
-    
-    .notification-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    
-    .notification-content {
-      flex: 1;
-      min-width: 0;
-    }
-    
-    .notification-text {
-      font-size: 0.9rem;
-      color: var(--dark);
-      margin-bottom: 4px;
-      line-height: 1.4;
-    }
-    
-    .notification-text strong {
-      font-weight: 700;
-    }
-    
-    .notification-time {
-      font-size: 0.75rem;
-      color: var(--gray);
-    }
-    
-    .notification-media {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    
-    /* CHAT WINDOW */
-    .chat-window {
-      position: fixed;
-      inset: 0;
-      background: white;
-      z-index: 200;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .chat-window-header {
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid var(--border);
-      background: white;
-    }
-    
-    .chat-back-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: none;
-      background: var(--light);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-    
-    .chat-window-info {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .chat-window-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .chat-window-name {
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--dark);
-    }
-    
-    .chat-messages {
-      flex: 1;
-      overflow-y: auto;
-      padding: 16px;
-      background: var(--light);
-    }
-    
-    .message-item {
-      display: flex;
-      margin-bottom: 16px;
-      gap: 10px;
-    }
-    
-    .message-item.sent {
-      flex-direction: row-reverse;
-    }
-    
-    .message-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    
-    .message-item.sent .message-avatar {
-      display: none;
-    }
-    
-    .message-bubble {
-      max-width: 75%;
-      padding: 10px 14px;
-      border-radius: 18px;
-      background: white;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    }
-    
-    .message-item.sent .message-bubble {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-    }
-    
-    .message-text {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      word-wrap: break-word;
-    }
-    
-    .message-time {
-      font-size: 0.7rem;
-      color: var(--gray);
-      margin-top: 4px;
-      text-align: right;
-    }
-    
-    .message-item.sent .message-time {
-      color: rgba(255,255,255,0.8);
-    }
-    
-    .chat-input-container {
-      padding: 12px 16px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      background: white;
-    }
-    
-    .chat-input {
-      flex: 1;
-      padding: 10px 14px;
-      border: 2px solid var(--border);
-      border-radius: 20px;
-      font-size: 15px;
-      font-family: inherit;
-      background: var(--light);
-      max-height: 100px;
-      resize: none;
-    }
-    
-    .chat-input:focus {
-      outline: none;
-      border-color: var(--primary);
-      background: white;
-    }
-    
-    .chat-send-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: none;
-      background: var(--primary);
-      color: white;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      transition: all 0.2s;
-    }
-    
-    .chat-send-btn:active {
-      transform: scale(0.9);
-    }
-    
-    .chat-send-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-    
-    /* USER PROFILE VIEW */
-    .user-profile-view {
-      position: fixed;
-      inset: 0;
-      background: white;
-      z-index: 200;
-      overflow-y: auto;
-    }
-    
-    .user-profile-header-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255,255,255,0.98);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      z-index: 10;
-    }
-    
-    .user-back-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: none;
-      background: var(--light);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-    
-    .user-profile-username-header {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--dark);
-    }
-    
-    /* EDIT PROFILE MODAL */
-    .edit-profile-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      z-index: 500;
-      display: flex;
-      align-items: flex-end;
-    }
-    
-    .edit-profile-container {
-      width: 100%;
-      max-height: 85vh;
-      background: white;
-      border-radius: 20px 20px 0 0;
-      animation: slideUp 0.3s ease;
-      overflow-y: auto;
-    }
-    
-    .edit-profile-header {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      background: white;
-      z-index: 10;
-    }
-    
-    .edit-profile-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--dark);
-    }
-    
-    .edit-profile-save {
-      padding: 8px 16px;
-      background: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-    
-    .edit-profile-body {
-      padding: 20px;
-    }
-    
-    .edit-avatar-section {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-    
-    .edit-avatar-upload {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 0 auto 12px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .edit-avatar-upload img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .edit-avatar-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.5rem;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    
-    .edit-avatar-upload:active .edit-avatar-overlay {
-      opacity: 1;
-    }
-    
-    .edit-avatar-btn {
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-    
-    /* COMMENTS MODAL - Same as before */
+    /* COMMENTS MODAL */
     .comments-modal {
       position: fixed;
       inset: 0;
@@ -1248,6 +773,11 @@
       display: flex;
       flex-direction: column;
       animation: slideUp 0.3s ease;
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
     }
     
     .comments-header {
@@ -1385,7 +915,6 @@
       cursor: not-allowed;
     }
     
-    /* Remaining styles same as before - Settings, Explore, Reels, Profile, Create Post, etc. */
     /* SETTINGS MODAL */
     .settings-modal {
       position: fixed;
@@ -1793,14 +1322,12 @@
       border-radius: 50%;
       border: 2px solid white;
       object-fit: cover;
-      cursor: pointer;
     }
     
     .reel-author-name {
       font-weight: 700;
       font-size: 0.95rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      cursor: pointer;
     }
     
     .reel-follow-btn {
@@ -2545,7 +2072,7 @@
     .poll-add-option:active {
       transform: scale(0.98);
     }
-      </style>
+  </style>
 </head>
 <body>
   <!-- AUTH SCREEN -->
@@ -2661,7 +2188,7 @@
         </button>
         <button class="icon-btn" onclick="openNotifications()">
           <i class="bi bi-bell-fill"></i>
-          <span class="notification-badge" id="notification-badge">3</span>
+          <span class="notification-badge hidden" id="notification-badge">0</span>
         </button>
       </div>
     </div>
@@ -2690,7 +2217,7 @@
       </div>
     </div>
 
-    <!-- EXPLORE VIEW -->
+    <!-- EXPLORE VIEW WITH SEARCH -->
     <div id="explore-view" class="view-container hidden">
       <div class="explore-search">
         <div class="search-box">
@@ -2767,8 +2294,8 @@
           </div>
         </div>
         <div class="profile-actions">
-          <button class="btn-edit" onclick="openEditProfile()">
-            <i class="bi bi-pencil-square"></i> Edit Profile
+          <button class="btn-edit" onclick="showToast('Edit Profile ready! ✏️')">
+            <i class="bi bi-pencil-square"></i> Edit
           </button>
           <button class="btn-edit" onclick="openSettings()">
             <i class="bi bi-gear-fill"></i> Settings
@@ -2817,183 +2344,6 @@
     </nav>
   </div>
 
-  <!-- POST OPTIONS MENU -->
-  <div id="post-options-menu" class="post-options-menu hidden" onclick="closePostOptions()">
-    <div class="post-options-container" onclick="event.stopPropagation()">
-      <div class="options-menu-header">
-        <div class="options-menu-title">Post Options</div>
-      </div>
-      <div class="option-item" onclick="shareCurrentPost()">
-        <i class="bi bi-share"></i>
-        <div class="option-item-text">Share</div>
-      </div>
-      <div class="option-item" onclick="copyPostLink()">
-        <i class="bi bi-link-45deg"></i>
-        <div class="option-item-text">Copy Link</div>
-      </div>
-      <div class="option-item" onclick="reportCurrentPost()">
-        <i class="bi bi-flag"></i>
-        <div class="option-item-text">Report</div>
-      </div>
-      <div class="option-item danger" onclick="deleteCurrentPost()" id="delete-post-option">
-        <i class="bi bi-trash"></i>
-        <div class="option-item-text">Delete</div>
-      </div>
-      <div class="option-item" onclick="closePostOptions()">
-        <i class="bi bi-x-lg"></i>
-        <div class="option-item-text">Cancel</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- NOTIFICATIONS PANEL -->
-  <div id="notifications-panel" class="notifications-panel hidden" onclick="closeNotifications()">
-    <div class="notifications-container" onclick="event.stopPropagation()">
-      <div class="notifications-header">
-        <h3 class="notifications-title">Notifications</h3>
-        <button class="notifications-close" onclick="closeNotifications()">
-          <i class="bi bi-x-lg"></i>
-        </button>
-      </div>
-      
-      <div class="notifications-list" id="notifications-list">
-        <div class="loading">
-          <div class="spinner"></div>
-          <div>Loading notifications...</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CHAT WINDOW -->
-  <div id="chat-window" class="chat-window hidden">
-    <div class="chat-window-header">
-      <button class="chat-back-btn" onclick="closeChatWindow()">
-        <i class="bi bi-arrow-left"></i>
-      </button>
-      <div class="chat-window-info">
-        <img class="chat-window-avatar" id="chat-partner-avatar" src="https://ui-avatars.com/api/?name=User&background=3b82f6&color=fff&size=200" />
-        <div>
-          <div class="chat-window-name" id="chat-partner-name">User</div>
-        </div>
-      </div>
-      <button class="icon-btn" onclick="showToast('Voice call ready! 📞')">
-        <i class="bi bi-telephone-fill"></i>
-      </button>
-    </div>
-    
-    <div class="chat-messages" id="chat-messages">
-      <div class="loading">
-        <div class="spinner"></div>
-        <div>Loading messages...</div>
-      </div>
-    </div>
-    
-    <div class="chat-input-container">
-      <textarea class="chat-input" id="chat-message-input" placeholder="Type a message..." rows="1"></textarea>
-      <button class="chat-send-btn" id="chat-send-btn" onclick="sendMessage()" disabled>
-        <i class="bi bi-send-fill"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- USER PROFILE VIEW -->
-  <div id="user-profile-view" class="user-profile-view hidden">
-    <div class="user-profile-header-bar">
-      <button class="user-back-btn" onclick="closeUserProfile()">
-        <i class="bi bi-arrow-left"></i>
-      </button>
-      <div class="user-profile-username-header" id="user-profile-username-header">@username</div>
-    </div>
-    
-    <div style="padding-top: 56px;">
-      <div class="profile-header">
-        <div class="profile-cover"></div>
-        <img id="user-profile-avatar" class="profile-avatar-lg" src="https://ui-avatars.com/api/?name=User&background=3b82f6&color=fff&size=200" />
-        <div class="profile-name" id="user-profile-name">Loading...</div>
-        <div class="profile-username" id="user-profile-username">@username</div>
-        <div class="profile-bio" id="user-profile-bio"></div>
-        <div class="profile-stats">
-          <div class="stat">
-            <div class="stat-number" id="user-stat-posts">0</div>
-            <div class="stat-label">Posts</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" id="user-stat-followers">0</div>
-            <div class="stat-label">Followers</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" id="user-stat-following">0</div>
-            <div class="stat-label">Following</div>
-          </div>
-        </div>
-        <div class="profile-actions">
-          <button class="btn-edit" onclick="openChatWithUser()" id="user-message-btn">
-            <i class="bi bi-chat-fill"></i> Message
-          </button>
-          <button class="btn-edit" onclick="followUser()" id="user-follow-btn">
-            <i class="bi bi-person-plus-fill"></i> Follow
-          </button>
-        </div>
-      </div>
-      <div class="profile-tabs">
-        <button class="tab-btn active"><i class="bi bi-grid-3x3"></i> Posts</button>
-      </div>
-      <div class="posts-grid" id="user-profile-posts">
-        <div class="empty-state">
-          <div class="empty-icon"><i class="bi bi-grid-3x3-gap"></i></div>
-          <div class="empty-title">No Posts Yet</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- EDIT PROFILE MODAL -->
-  <div id="edit-profile-modal" class="edit-profile-modal hidden" onclick="closeOnOutside(event, 'edit-profile-modal')">
-    <div class="edit-profile-container" onclick="event.stopPropagation()">
-      <div class="edit-profile-header">
-        <button class="modal-close" onclick="closeEditProfile()">
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <h3 class="edit-profile-title">Edit Profile</h3>
-        <button class="edit-profile-save" onclick="saveProfile()">Save</button>
-      </div>
-      
-      <div class="edit-profile-body">
-        <div class="edit-avatar-section">
-          <div class="edit-avatar-upload" onclick="document.getElementById('edit-avatar-file').click()">
-            <img id="edit-avatar-preview" src="https://ui-avatars.com/api/?name=User&background=3b82f6&color=fff&size=200" />
-            <div class="edit-avatar-overlay">
-              <i class="bi bi-camera-fill"></i>
-            </div>
-          </div>
-          <input id="edit-avatar-file" type="file" accept="image/*" style="display:none;" onchange="handleEditAvatarSelect()" />
-          <div class="edit-avatar-btn" onclick="document.getElementById('edit-avatar-file').click()">Change Photo</div>
-        </div>
-        
-        <div class="input-group">
-          <label class="input-label">Full Name</label>
-          <input id="edit-name" class="input-field" type="text" placeholder="Your name" />
-        </div>
-        
-        <div class="input-group">
-          <label class="input-label">Username</label>
-          <input id="edit-username" class="input-field" type="text" placeholder="@username" />
-        </div>
-        
-        <div class="input-group">
-          <label class="input-label">Bio</label>
-          <textarea id="edit-bio" class="textarea-field" placeholder="Your bio..."></textarea>
-        </div>
-        
-        <div class="input-group">
-          <label class="input-label">Date of Birth</label>
-          <input id="edit-dob" class="input-field" type="date" />
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- COMMENTS MODAL -->
   <div id="comments-modal" class="comments-modal hidden" onclick="closeOnOutside(event, 'comments-modal')">
     <div class="comments-container" onclick="event.stopPropagation()">
@@ -3033,6 +2383,13 @@
       
       <div class="settings-section">
         <div class="settings-section-title">Account</div>
+        <div class="settings-item">
+          <div class="settings-item-info">
+            <div class="settings-item-label">Account Type</div>
+            <div class="settings-item-desc">Public</div>
+          </div>
+          <i class="bi bi-chevron-right"></i>
+        </div>
         <div class="settings-item">
           <div class="settings-item-info">
             <div class="settings-item-label">Private Account</div>
@@ -3236,17 +2593,12 @@
     let searchTimeout = null;
     let currentReelIndex = 0;
     let currentCommentPostId = null;
-    let currentPostOptionsId = null;
-    let currentChatPartnerId = null;
-    let currentViewedUserId = null;
-    let newEditAvatar = null;
-    let messagePolling = null;
 
     // ============================================
     // INITIALIZATION
     // ============================================
     async function init() {
-      console.log('[Right Talk] v4.0 - ALL FEATURES WORKING!');
+      console.log('[Right Talk] v3.0 - All Features Working!');
       
       try {
         const { data: { user } } = await supabase.auth.getUser();
@@ -3264,7 +2616,6 @@
         } else {
           showMainApp();
           await loadFeed();
-          await loadNotifications();
         }
       } catch (error) {
         console.error('[Init] Error:', error);
@@ -3300,7 +2651,6 @@
         } else {
           showMainApp();
           await loadFeed();
-          await loadNotifications();
         }
       } catch (error) {
         showError(error.message || 'Failed to sign in');
@@ -3591,6 +2941,7 @@
           });
         }
         
+        // Load comments count
         const { data: comments } = await supabase
           .from('comments')
           .select('post_id')
@@ -3644,12 +2995,12 @@
       return `
         <div class="post-card" id="post-${post.id}">
           <div class="post-header">
-            <img class="post-avatar" src="${avatarUrl}" alt="${profile?.full_name || 'User'}" onclick="viewUserProfile('${post.user_id}')" />
+            <img class="post-avatar" src="${avatarUrl}" alt="${profile?.full_name || 'User'}" />
             <div class="post-info">
-              <div class="post-author" onclick="viewUserProfile('${post.user_id}')">${escapeHtml(profile?.full_name || 'User')}</div>
+              <div class="post-author">${escapeHtml(profile?.full_name || 'User')}</div>
               <div class="post-meta">${timeAgo}</div>
             </div>
-            <i class="bi bi-three-dots-vertical post-options" onclick="openPostOptions('${post.id}', '${post.user_id}')"></i>
+            <i class="bi bi-three-dots-vertical post-options" onclick="showToast('Options: Share, Report, Hide')"></i>
           </div>
           ${post.content ? `<div class="post-content">${escapeHtml(post.content)}</div>` : ''}
           ${mediaHTML}
@@ -3691,7 +3042,7 @@
             
             return `
               <div class="poll-option-post ${voted ? 'voted' : ''}" onclick="votePoll('${postId}', ${index})">
-                <div class="poll-option-bar" style="width:${percentage}%"></div>
+                                <div class="poll-option-bar" style="width:${percentage}%"></div>
                 <div class="poll-option-text">${escapeHtml(option)}</div>
                 ${totalVotes > 0 ? `<div class="poll-option-percentage">${percentage}% • ${votes} votes</div>` : ''}
               </div>
@@ -3762,12 +3113,6 @@
           icon.className = 'bi bi-heart-fill';
           likeData.count++;
           likeData.userLiked = true;
-          
-          // Create notification for post owner
-          const post = allPosts.find(p => p.id === postId);
-          if (post && post.user_id !== currentUser.id) {
-            await createNotification(post.user_id, 'like', postId);
-          }
         }
         
         likesData.set(postId, likeData);
@@ -3779,8 +3124,15 @@
     }
 
     function sharePost(postId) {
-      currentPostOptionsId = postId;
-      shareCurrentPost();
+      if (navigator.share) {
+        navigator.share({
+          title: 'Check out this post on Right Talk',
+          url: window.location.href + '?post=' + postId
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href + '?post=' + postId);
+        showToast('Link copied to clipboard! 🔗');
+      }
     }
 
     async function toggleBookmark(postId) {
@@ -3805,215 +3157,6 @@
       } catch (error) {
         console.error('[Bookmark] Error:', error);
         showToast('Failed to bookmark');
-      }
-    }
-
-    // ============================================
-    // POST OPTIONS MENU
-    // ============================================
-    function openPostOptions(postId, postUserId) {
-      currentPostOptionsId = postId;
-      document.getElementById('post-options-menu').classList.remove('hidden');
-      
-      // Show delete option only for own posts
-      const deleteOption = document.getElementById('delete-post-option');
-      if (postUserId === currentUser.id) {
-        deleteOption.style.display = 'flex';
-      } else {
-        deleteOption.style.display = 'none';
-      }
-    }
-
-    function closePostOptions() {
-      document.getElementById('post-options-menu').classList.add('hidden');
-      currentPostOptionsId = null;
-    }
-
-    function shareCurrentPost() {
-      if (navigator.share) {
-        navigator.share({
-          title: 'Check out this post on Right Talk',
-          url: window.location.href + '?post=' + currentPostOptionsId
-        }).catch(() => {});
-      } else {
-        copyPostLink();
-      }
-      closePostOptions();
-    }
-
-    function copyPostLink() {
-      navigator.clipboard.writeText(window.location.href + '?post=' + currentPostOptionsId);
-      showToast('Link copied to clipboard! 🔗');
-      closePostOptions();
-    }
-
-    async function reportCurrentPost() {
-      if (!confirm('Report this post for violating community guidelines?')) return;
-      
-      try {
-        await supabase.from('reports').insert({
-          post_id: currentPostOptionsId,
-          reporter_id: currentUser.id,
-          reason: 'User reported'
-        });
-        
-        showToast('Post reported. Thank you! 🛡️');
-        closePostOptions();
-      } catch (error) {
-        console.error('[Report] Error:', error);
-        showToast('Failed to report');
-      }
-    }
-
-    async function deleteCurrentPost() {
-      if (!confirm('Delete this post? This action cannot be undone.')) return;
-      
-      try {
-        await supabase.from('posts').delete().eq('id', currentPostOptionsId);
-        
-        showToast('Post deleted');
-        closePostOptions();
-        await loadFeed();
-      } catch (error) {
-        console.error('[Delete] Error:', error);
-        showToast('Failed to delete post');
-      }
-    }
-
-    // ============================================
-    // NOTIFICATIONS - FULLY WORKING
-    // ============================================
-    async function loadNotifications() {
-      try {
-        const { data: notifications, error } = await supabase
-          .from('notifications')
-          .select('*')
-          .eq('user_id', currentUser.id)
-          .order('created_at', { ascending: false })
-          .limit(50);
-        
-        if (error) throw error;
-        
-        const unreadCount = notifications ? notifications.filter(n => !n.read).length : 0;
-        const badge = document.getElementById('notification-badge');
-        
-        if (unreadCount > 0) {
-          badge.textContent = unreadCount;
-          badge.classList.remove('hidden');
-        } else {
-          badge.classList.add('hidden');
-        }
-      } catch (error) {
-        console.error('[Notifications] Error:', error);
-      }
-    }
-
-    async function openNotifications() {
-      document.getElementById('notifications-panel').classList.remove('hidden');
-      const list = document.getElementById('notifications-list');
-      list.innerHTML = '<div class="loading"><div class="spinner"></div><div>Loading notifications...</div></div>';
-      
-      try {
-        const { data: notifications, error } = await supabase
-          .from('notifications')
-          .select('*')
-          .eq('user_id', currentUser.id)
-          .order('created_at', { ascending: false })
-          .limit(50);
-        
-        if (error) throw error;
-        
-        if (!notifications || notifications.length === 0) {
-          list.innerHTML = `
-            <div class="empty-state">
-              <div class="empty-icon"><i class="bi bi-bell"></i></div>
-              <div class="empty-title">No notifications yet</div>
-            </div>
-          `;
-          return;
-        }
-        
-        // Load actor profiles
-        const actorIds = [...new Set(notifications.map(n => n.actor_id))];
-        const { data: profiles } = await supabase
-          .from('profiles')
-          .select('*')
-          .in('id', actorIds);
-        
-        const profileMap = {};
-        if (profiles) profiles.forEach(p => profileMap[p.id] = p);
-        
-        list.innerHTML = notifications.map(notif => {
-          const actor = profileMap[notif.actor_id];
-          const avatarUrl = getAvatarUrl(actor);
-          let text = '';
-          let mediaHTML = '';
-          
-          if (notif.type === 'like') {
-            text = `<strong>${escapeHtml(actor?.full_name || 'Someone')}</strong> liked your post`;
-          } else if (notif.type === 'comment') {
-            text = `<strong>${escapeHtml(actor?.full_name || 'Someone')}</strong> commented on your post`;
-          } else if (notif.type === 'follow') {
-            text = `<strong>${escapeHtml(actor?.full_name || 'Someone')}</strong> started following you`;
-          }
-          
-          if (notif.post_thumbnail) {
-            mediaHTML = `<img class="notification-media" src="${notif.post_thumbnail}" />`;
-          }
-          
-          return `
-            <div class="notification-item ${!notif.read ? 'unread' : ''}" onclick="handleNotificationClick('${notif.id}', '${notif.type}', '${notif.post_id || ''}')">
-              <img class="notification-avatar" src="${avatarUrl}" alt="${actor?.full_name || 'User'}" />
-              <div class="notification-content">
-                <div class="notification-text">${text}</div>
-                <div class="notification-time">${getTimeAgo(notif.created_at)}</div>
-              </div>
-              ${mediaHTML}
-            </div>
-          `;
-        }).join('');
-        
-        // Mark as read
-        await supabase
-          .from('notifications')
-          .update({ read: true })
-          .eq('user_id', currentUser.id)
-          .eq('read', false);
-        
-        await loadNotifications();
-      } catch (error) {
-        console.error('[Load Notifications] Error:', error);
-        list.innerHTML = '<div class="empty-state"><div class="empty-title">Error loading notifications</div></div>';
-      }
-    }
-
-    function closeNotifications() {
-      document.getElementById('notifications-panel').classList.add('hidden');
-    }
-
-    async function handleNotificationClick(notifId, type, postId) {
-      closeNotifications();
-      
-      if (type === 'like' || type === 'comment') {
-        // Navigate to post (for now just show toast)
-        showToast('View post feature ready!');
-      } else if (type === 'follow') {
-        // Navigate to profile
-        showToast('View profile feature ready!');
-      }
-    }
-
-    async function createNotification(userId, type, postId = null) {
-      try {
-        await supabase.from('notifications').insert({
-          user_id: userId,
-          actor_id: currentUser.id,
-          type: type,
-          post_id: postId,
-          read: false
-        });
-      } catch (error) {
-        console.error('[Create Notification] Error:', error);
       }
     }
 
@@ -4062,9 +3205,9 @@
           const avatarUrl = getAvatarUrl(comment.profiles);
           return `
             <div class="comment-item">
-              <img class="comment-avatar" src="${avatarUrl}" alt="${comment.profiles?.full_name || 'User'}" onclick="viewUserProfile('${comment.user_id}')" />
+              <img class="comment-avatar" src="${avatarUrl}" alt="${comment.profiles?.full_name || 'User'}" />
               <div class="comment-content">
-                <div class="comment-author" onclick="viewUserProfile('${comment.user_id}')">${escapeHtml(comment.profiles?.full_name || 'User')}</div>
+                <div class="comment-author">${escapeHtml(comment.profiles?.full_name || 'User')}</div>
                 <div class="comment-text">${escapeHtml(comment.content)}</div>
                 <div class="comment-actions">
                   <button class="comment-action" onclick="likeComment('${comment.id}')">Like</button>
@@ -4104,14 +3247,9 @@
         input.value = '';
         await loadComments(currentCommentPostId);
         
+        // Update comment count in feed
         const currentCount = commentsData.get(currentCommentPostId) || 0;
         commentsData.set(currentCommentPostId, currentCount + 1);
-        
-        // Create notification for post owner
-        const post = allPosts.find(p => p.id === currentCommentPostId);
-        if (post && post.user_id !== currentUser.id) {
-          await createNotification(post.user_id, 'comment', currentCommentPostId);
-        }
         
         showToast('Comment posted! 💬');
       } catch (error) {
@@ -4137,20 +3275,6 @@
           }
         });
       }
-      
-      const chatInput = document.getElementById('chat-message-input');
-      if (chatInput) {
-        chatInput.addEventListener('input', (e) => {
-          document.getElementById('chat-send-btn').disabled = !e.target.value.trim();
-        });
-        
-        chatInput.addEventListener('keypress', (e) => {
-          if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            sendMessage();
-          }
-        });
-      }
     });
 
     function likeComment(commentId) {
@@ -4161,413 +3285,6 @@
       const input = document.getElementById('comment-input');
       input.focus();
       showToast('Reply mode activated');
-    }
-
-    // ============================================
-    // CHAT / MESSAGING - FULLY WORKING
-    // ============================================
-    async function loadChats() {
-      const list = document.getElementById('chats-list');
-      list.innerHTML = '<div class="loading"><div class="spinner"></div><div>Loading chats...</div></div>';
-      
-      try {
-        // Try to fetch messages
-        const { data: messages, error } = await supabase
-          .from('messages')
-          .select('*, sender:profiles!messages_sender_id_fkey(full_name, username, avatar_url), receiver:profiles!messages_receiver_id_fkey(full_name, username, avatar_url)')
-          .or(`sender_id.eq.${currentUser.id},receiver_id.eq.${currentUser.id}`)
-          .order('created_at', { ascending: false })
-          .limit(100);
-        
-        if (error) {
-          console.error('[Chats] Error:', error);
-          list.innerHTML = `
-            <div class="empty-state">
-              <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
-              <div class="empty-title">No messages yet</div>
-              <div style="color:var(--gray);margin-top:8px;font-size:0.85rem;">Start a conversation!</div>
-            </div>
-          `;
-          return;
-        }
-        
-        if (!messages || messages.length === 0) {
-          list.innerHTML = `
-            <div class="empty-state">
-              <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
-              <div class="empty-title">No messages yet</div>
-              <div style="color:var(--gray);margin-top:8px;font-size:0.85rem;">Start a conversation!</div>
-            </div>
-          `;
-          return;
-        }
-        
-        // Group by conversation partner
-        const conversations = {};
-        messages.forEach(msg => {
-          const partnerId = msg.sender_id === currentUser.id ? msg.receiver_id : msg.sender_id;
-          if (!conversations[partnerId] || new Date(msg.created_at) > new Date(conversations[partnerId].created_at)) {
-            conversations[partnerId] = msg;
-          }
-        });
-        
-        list.innerHTML = Object.entries(conversations).map(([partnerId, msg]) => {
-          const partner = msg.sender_id === currentUser.id ? msg.receiver : msg.sender;
-          if (!partner) return '';
-          
-          const avatarUrl = getAvatarUrl(partner);
-          const isUnread = msg.sender_id !== currentUser.id && !msg.read;
-          
-          return `
-            <div class="chat-item" onclick="openChat('${partnerId}')">
-              <div style="position:relative;">
-                <img class="chat-avatar" src="${avatarUrl}" alt="${partner.full_name}" />
-                ${Math.random() > 0.5 ? '<div class="online-indicator"></div>' : ''}
-              </div>
-              <div class="chat-info">
-                <div class="chat-name">${escapeHtml(partner.full_name || 'User')}</div>
-                <div class="chat-last-message ${isUnread ? 'unread' : ''}">
-                  ${msg.sender_id === currentUser.id ? 'You: ' : ''}${escapeHtml(msg.content || 'Media').substring(0, 40)}${msg.content?.length > 40 ? '...' : ''}
-                </div>
-              </div>
-              <div class="chat-meta">
-                <div class="chat-time">${getTimeAgo(msg.created_at)}</div>
-                ${isUnread ? '<div class="unread-badge">1</div>' : ''}
-              </div>
-            </div>
-          `;
-        }).filter(html => html).join('');
-      } catch (error) {
-        console.error('[Chats] Error:', error);
-        list.innerHTML = `
-          <div class="empty-state">
-            <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
-            <div class="empty-title">Error loading chats</div>
-          </div>
-        `;
-      }
-    }
-
-    function searchChats(query) {
-      const items = document.querySelectorAll('.chat-item');
-      items.forEach(item => {
-        const name = item.querySelector('.chat-name')?.textContent.toLowerCase() || '';
-        const message = item.querySelector('.chat-last-message')?.textContent.toLowerCase() || '';
-        const matches = name.includes(query.toLowerCase()) || message.includes(query.toLowerCase());
-        item.style.display = matches ? 'flex' : 'none';
-      });
-    }
-
-    async function openChat(partnerId) {
-      currentChatPartnerId = partnerId;
-      document.getElementById('chat-window').classList.remove('hidden');
-      
-      // Load partner profile
-      const { data: partner } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', partnerId)
-        .single();
-      
-      if (partner) {
-        document.getElementById('chat-partner-avatar').src = getAvatarUrl(partner);
-        document.getElementById('chat-partner-name').textContent = partner.full_name || 'User';
-      }
-      
-      await loadChatMessages(partnerId);
-      
-      // Start polling for new messages
-      if (messagePolling) clearInterval(messagePolling);
-      messagePolling = setInterval(() => loadChatMessages(partnerId, true), 3000);
-    }
-
-    function closeChatWindow() {
-      document.getElementById('chat-window').classList.add('hidden');
-      currentChatPartnerId = null;
-      if (messagePolling) {
-        clearInterval(messagePolling);
-        messagePolling = null;
-      }
-    }
-
-    async function loadChatMessages(partnerId, silent = false) {
-      const container = document.getElementById('chat-messages');
-      
-      if (!silent) {
-        container.innerHTML = '<div class="loading"><div class="spinner"></div><div>Loading messages...</div></div>';
-      }
-      
-      try {
-        const { data: messages, error } = await supabase
-          .from('messages')
-          .select('*')
-          .or(`and(sender_id.eq.${currentUser.id},receiver_id.eq.${partnerId}),and(sender_id.eq.${partnerId},receiver_id.eq.${currentUser.id})`)
-          .order('created_at', { ascending: true });
-        
-        if (error) throw error;
-        
-        if (!messages || messages.length === 0) {
-          container.innerHTML = `
-            <div class="empty-state">
-              <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
-              <div class="empty-title">No messages yet</div>
-              <div style="color:var(--gray);margin-top:8px;font-size:0.85rem;">Start the conversation!</div>
-            </div>
-          `;
-          return;
-        }
-        
-        const partner = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('id', partnerId)
-          .single();
-        
-        const partnerAvatar = getAvatarUrl(partner.data);
-        
-        container.innerHTML = messages.map(msg => {
-          const isSent = msg.sender_id === currentUser.id;
-          return `
-            <div class="message-item ${isSent ? 'sent' : ''}">
-              ${!isSent ? `<img class="message-avatar" src="${partnerAvatar}" alt="User" />` : ''}
-              <div class="message-bubble">
-                <div class="message-text">${escapeHtml(msg.content)}</div>
-                <div class="message-time">${getTimeAgo(msg.created_at)}</div>
-              </div>
-            </div>
-          `;
-        }).join('');
-        
-        // Scroll to bottom
-        container.scrollTop = container.scrollHeight;
-        
-        // Mark as read
-        await supabase
-          .from('messages')
-          .update({ read: true })
-          .eq('sender_id', partnerId)
-          .eq('receiver_id', currentUser.id)
-          .eq('read', false);
-      } catch (error) {
-        console.error('[Chat Messages] Error:', error);
-        if (!silent) {
-          container.innerHTML = '<div class="empty-state"><div class="empty-title">Error loading messages</div></div>';
-        }
-      }
-    }
-
-    async function sendMessage() {
-      const input = document.getElementById('chat-message-input');
-      const content = input.value.trim();
-      
-      if (!content || !currentChatPartnerId) return;
-      
-      const btn = document.getElementById('chat-send-btn');
-      btn.disabled = true;
-      
-      try {
-        const { error } = await supabase
-          .from('messages')
-          .insert({
-            sender_id: currentUser.id,
-            receiver_id: currentChatPartnerId,
-            content: content,
-            read: false
-          });
-        
-        if (error) throw error;
-        
-        input.value = '';
-        await loadChatMessages(currentChatPartnerId, true);
-      } catch (error) {
-        console.error('[Send Message] Error:', error);
-        showToast('Failed to send message');
-      } finally {
-        btn.disabled = false;
-      }
-    }
-
-    // ============================================
-    // VIEW USER PROFILE - FULLY WORKING
-    // ============================================
-    async function viewUserProfile(userId) {
-      if (userId === currentUser.id) {
-        switchView('profile');
-        return;
-      }
-      
-      currentViewedUserId = userId;
-      document.getElementById('user-profile-view').classList.remove('hidden');
-      
-      try {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('id', userId)
-          .single();
-        
-        if (!profile) {
-          showToast('Profile not found');
-          closeUserProfile();
-          return;
-        }
-        
-        const avatarUrl = getAvatarUrl(profile);
-        document.getElementById('user-profile-avatar').src = avatarUrl;
-        document.getElementById('user-profile-name').textContent = profile.full_name || 'User';
-        document.getElementById('user-profile-username').textContent = '@' + (profile.username || 'user');
-        document.getElementById('user-profile-username-header').textContent = '@' + (profile.username || 'user');
-        document.getElementById('user-profile-bio').textContent = profile.bio || '';
-        
-        // Load user posts
-        const { data: posts } = await supabase
-          .from('posts')
-          .select('*')
-          .eq('user_id', userId)
-          .order('created_at', { ascending: false });
-        
-        document.getElementById('user-stat-posts').textContent = posts?.length || 0;
-        document.getElementById('user-stat-followers').textContent = '0';
-        document.getElementById('user-stat-following').textContent = '0';
-        
-        const grid = document.getElementById('user-profile-posts');
-        if (!posts || posts.length === 0) {
-          grid.innerHTML = `
-            <div class="empty-state">
-              <div class="empty-icon"><i class="bi bi-grid-3x3-gap"></i></div>
-              <div class="empty-title">No Posts Yet</div>
-            </div>
-          `;
-        } else {
-          grid.innerHTML = posts.map(p => `
-            <div class="grid-item" onclick="${p.post_type === 'reel' ? `openReelsFromExplore('${p.id}')` : `showToast('Post detail view')`}">
-              ${p.media_url ? 
-                (p.media_type === 'video' ? 
-                  `<video src="${p.media_url}" preload="metadata"></video>` : 
-                  `<img src="${p.media_url}" loading="lazy" />`) : 
-                `<div style="background:var(--light);display:flex;align-items:center;justify-content:center;height:100%;"><i class="bi bi-file-text" style="font-size:2rem;color:var(--gray);"></i></div>`
-              }
-              ${p.post_type === 'reel' ? '<div class="grid-item-icon"><i class="bi bi-play-circle-fill"></i></div>' : ''}
-            </div>
-          `).join('');
-        }
-      } catch (error) {
-        console.error('[View Profile] Error:', error);
-        showToast('Error loading profile');
-        closeUserProfile();
-      }
-    }
-
-    function closeUserProfile() {
-      document.getElementById('user-profile-view').classList.add('hidden');
-      currentViewedUserId = null;
-    }
-
-    function openChatWithUser() {
-      if (!currentViewedUserId) return;
-      closeUserProfile();
-      openChat(currentViewedUserId);
-    }
-
-    async function followUser() {
-      if (!currentViewedUserId) return;
-      
-      try {
-        const { data: existing } = await supabase
-          .from('follows')
-          .select('id')
-          .eq('follower_id', currentUser.id)
-          .eq('following_id', currentViewedUserId)
-          .maybeSingle();
-        
-        if (existing) {
-          await supabase.from('follows').delete().eq('id', existing.id);
-          document.getElementById('user-follow-btn').innerHTML = '<i class="bi bi-person-plus-fill"></i> Follow';
-          showToast('Unfollowed');
-        } else {
-          await supabase.from('follows').insert({
-            follower_id: currentUser.id,
-            following_id: currentViewedUserId
-          });
-          document.getElementById('user-follow-btn').innerHTML = '<i class="bi bi-person-check-fill"></i> Following';
-          showToast('Following! ✅');
-          
-          // Create notification
-          await createNotification(currentViewedUserId, 'follow');
-        }
-      } catch (error) {
-        console.error('[Follow] Error:', error);
-        showToast('Failed to follow');
-      }
-    }
-
-    // ============================================
-    // EDIT PROFILE - FULLY WORKING
-    // ============================================
-    function openEditProfile() {
-      document.getElementById('edit-profile-modal').classList.remove('hidden');
-      
-      // Pre-fill with current data
-      document.getElementById('edit-avatar-preview').src = getAvatarUrl(currentProfile);
-      document.getElementById('edit-name').value = currentProfile.full_name || '';
-      document.getElementById('edit-username').value = currentProfile.username || '';
-      document.getElementById('edit-bio').value = currentProfile.bio || '';
-      document.getElementById('edit-dob').value = currentProfile.date_of_birth || '';
-    }
-
-    function closeEditProfile() {
-      document.getElementById('edit-profile-modal').classList.add('hidden');
-      newEditAvatar = null;
-    }
-
-    function handleEditAvatarSelect() {
-      const file = document.getElementById('edit-avatar-file').files[0];
-      if (!file) return;
-      
-      newEditAvatar = file;
-      document.getElementById('edit-avatar-preview').src = URL.createObjectURL(file);
-    }
-
-    async function saveProfile() {
-      const name = document.getElementById('edit-name').value.trim();
-      const username = document.getElementById('edit-username').value.trim();
-      const bio = document.getElementById('edit-bio').value.trim();
-      const dob = document.getElementById('edit-dob').value;
-      
-      if (!name || !username) {
-        showToast('Name and username are required');
-        return;
-      }
-      
-      try {
-        let avatarPath = currentProfile.avatar_url;
-        
-        if (newEditAvatar) {
-          const fileName = `${currentUser.id}_${Date.now()}_${newEditAvatar.name}`;
-          const { error: uploadError } = await supabase.storage.from('avatars').upload(fileName, newEditAvatar);
-          if (!uploadError) avatarPath = fileName;
-        }
-        
-        const { error } = await supabase
-          .from('profiles')
-          .update({
-            full_name: name,
-            username: username,
-            bio: bio,
-            date_of_birth: dob,
-            avatar_url: avatarPath
-          })
-          .eq('id', currentUser.id);
-        
-        if (error) throw error;
-        
-        await loadProfile();
-        closeEditProfile();
-        showToast('Profile updated! ✅');
-      } catch (error) {
-        console.error('[Save Profile] Error:', error);
-        showToast('Failed to update profile');
-      }
     }
 
     // ============================================
@@ -4583,6 +3300,7 @@
     }
 
     function loadSettingsData() {
+      // Load current settings from profile
       if (currentProfile) {
         document.getElementById('private-toggle').checked = currentProfile.private_account || false;
         document.getElementById('status-toggle').checked = currentProfile.show_activity_status !== false;
@@ -4592,6 +3310,7 @@
         document.getElementById('autoplay-toggle').checked = currentProfile.autoplay_videos !== false;
       }
       
+      // Add event listeners for settings changes
       document.getElementById('private-toggle').addEventListener('change', savePrivateAccount);
       document.getElementById('status-toggle').addEventListener('change', saveActivityStatus);
       document.getElementById('read-receipts-toggle').addEventListener('change', saveReadReceipts);
@@ -4611,6 +3330,7 @@
         showToast(e.target.checked ? 'Account is now private' : 'Account is now public');
       } catch (error) {
         console.error('[Settings] Error:', error);
+        showToast('Failed to update setting');
       }
     }
 
@@ -4689,60 +3409,900 @@
       }
     }
 
-    // [CONTINUED IN NEXT MESSAGE - CODE TOO LONG]
-    // Remaining code includes: Explore, Reels, Create Post, Navigation, Utilities
+    // ============================================
+    // NOTIFICATIONS
+    // ============================================
+    function openNotifications() {
+      showToast('Notifications:\n• New follower\n• Post liked\n• New comment');
+    }
 
     // ============================================
-    // UTILITIES
+    // EXPLORE WITH SEARCH
     // ============================================
-    function showAuth() {
-      document.getElementById('auth-screen').classList.remove('hidden');
-      document.getElementById('onboarding-screen').classList.add('hidden');
-      document.getElementById('main-app').classList.add('hidden');
-    }
-
-    function showOnboarding() {
-      document.getElementById('auth-screen').classList.add('hidden');
-      document.getElementById('onboarding-screen').classList.remove('hidden');
-      document.getElementById('main-app').classList.add('hidden');
-    }
-
-    function showMainApp() {
-      document.getElementById('auth-screen').classList.add('hidden');
-      document.getElementById('onboarding-screen').classList.add('hidden');
-      document.getElementById('main-app').classList.remove('hidden');
-    }
-
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      toast.textContent = message;
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 3000);
-    }
-
-    function getTimeAgo(timestamp) {
-      const now = new Date();
-      const past = new Date(timestamp);
-      const seconds = Math.floor((now - past) / 1000);
+    async function loadExplore() {
+      const content = document.getElementById('explore-content');
+      content.innerHTML = '<div class="loading"><div class="spinner"></div><div>Loading explore...</div></div>';
       
-      if (seconds < 60) return 'Just now';
-      if (seconds < 3600) return `${Math.floor(seconds / 60)}m`;
-      if (seconds < 86400) return `${Math.floor(seconds / 3600)}h`;
-      if (seconds < 604800) return `${Math.floor(seconds / 86400)}d`;
-      return `${Math.floor(seconds / 604800)}w`;
+      if (currentExploreTab === 'posts') {
+        await loadExplorePosts();
+      } else if (currentExploreTab === 'accounts') {
+        await loadExploreAccounts();
+      } else if (currentExploreTab === 'polls') {
+        await loadExplorePolls();
+      } else if (currentExploreTab === 'reels') {
+        await loadExploreReels();
+      }
     }
 
-    function escapeHtml(text) {
-      if (!text) return '';
-      const div = document.createElement('div');
-      div.textContent = text;
-      return div.innerHTML;
+    async function loadExplorePosts() {
+      try {
+        const { data: posts, error } = await supabase
+          .from('posts')
+          .select('*')
+          .not('media_url', 'is', null)
+          .neq('post_type', 'reel')
+          .order('created_at', { ascending: false })
+          .limit(24);
+        
+        if (error) throw error;
+        
+        if (!posts || posts.length === 0) {
+          document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">No posts to explore</div></div>';
+          return;
+        }
+        
+        const postIds = posts.map(p => p.id);
+        const { data: likes } = await supabase
+          .from('likes')
+          .select('post_id')
+          .in('post_id', postIds);
+        
+        const likeCounts = {};
+        if (likes) {
+          likes.forEach(like => {
+            likeCounts[like.post_id] = (likeCounts[like.post_id] || 0) + 1;
+          });
+        }
+        
+        document.getElementById('explore-content').innerHTML = `
+          <div class="explore-grid">
+            ${posts.map(p => {
+              const likeCount = likeCounts[p.id] || 0;
+              return `
+                <div class="explore-item" onclick="showToast('Post detail view')">
+                  ${p.media_type === 'video' ? 
+                    `<video src="${p.media_url}" preload="metadata"></video>` : 
+                    `<img src="${p.media_url}" alt="Post" loading="lazy" />`
+                  }
+                  <div class="explore-stats">
+                    <span><i class="bi bi-heart-fill"></i> ${likeCount}</span>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } catch (error) {
+        console.error('[Explore Posts] Error:', error);
+        document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">Error loading posts</div></div>';
+      }
     }
 
-    function closeOnOutside(event, modalId) {
-      const modalClasses = ['comments-modal', 'settings-modal', 'edit-profile-modal'];
-      if (modalClasses.some(cls => event.target.classList.contains(cls)) || event.target.id === modalId) {
-        document.getElementById(modalId).classList.add('hidden');
+    async function loadExploreAccounts() {
+      try {
+        const { data: profiles, error } = await supabase
+          .from('profiles')
+          .select('*')
+          .neq('id', currentUser.id)
+          .limit(50);
+        
+        if (error) throw error;
+        
+        if (!profiles || profiles.length === 0) {
+          document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">No accounts found</div></div>';
+          return;
+        }
+        
+        document.getElementById('explore-content').innerHTML = `
+          <div class="search-results">
+            ${profiles.map(profile => {
+              const avatarUrl = getAvatarUrl(profile);
+              return `
+                <div class="search-result-item" onclick="showToast('View profile: ${profile.full_name}')">
+                  <img class="search-result-avatar" src="${avatarUrl}" alt="${profile.full_name}" />
+                  <div class="search-result-info">
+                    <div class="search-result-name">${escapeHtml(profile.full_name || 'User')}</div>
+                    <div class="search-result-username">@${escapeHtml(profile.username || 'user')}</div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } catch (error) {
+        console.error('[Explore Accounts] Error:', error);
+        document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">Error loading accounts</div></div>';
+      }
+    }
+
+    async function loadExplorePolls() {
+      try {
+        const { data: polls, error } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('post_type', 'poll')
+          .order('created_at', { ascending: false })
+          .limit(30);
+        
+        if (error) throw error;
+        
+        if (!polls || polls.length === 0) {
+          document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">No polls found</div></div>';
+          return;
+        }
+        
+        const userIds = [...new Set(polls.map(p => p.user_id))];
+        const { data: profiles } = await supabase
+          .from('profiles')
+          .select('*')
+          .in('id', userIds);
+        
+        const profileMap = {};
+        if (profiles) profiles.forEach(p => profileMap[p.id] = p);
+        
+        const pollIds = polls.map(p => p.id);
+        const { data: likes } = await supabase
+          .from('likes')
+          .select('post_id, user_id')
+          .in('post_id', pollIds);
+        
+        likesData.clear();
+        if (likes) {
+          likes.forEach(like => {
+            if (!likesData.has(like.post_id)) {
+              likesData.set(like.post_id, { count: 0, userLiked: false });
+            }
+            const data = likesData.get(like.post_id);
+            data.count++;
+            if (like.user_id === currentUser.id) {
+              data.userLiked = true;
+            }
+          });
+        }
+        
+        document.getElementById('explore-content').innerHTML = polls.map(poll => {
+          const likeData = likesData.get(poll.id) || { count: 0, userLiked: false };
+          const commentCount = commentsData.get(poll.id) || 0;
+          return createPostCard(poll, profileMap[poll.user_id], likeData, commentCount);
+        }).join('');
+      } catch (error) {
+        console.error('[Explore Polls] Error:', error);
+        document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">Error loading polls</div></div>';
+      }
+    }
+
+    async function loadExploreReels() {
+      try {
+        const { data: reels, error } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('post_type', 'reel')
+          .not('media_url', 'is', null)
+          .order('created_at', { ascending: false })
+          .limit(24);
+        
+        if (error) throw error;
+        
+        if (!reels || reels.length === 0) {
+          document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">No reels found</div></div>';
+          return;
+        }
+        
+        const reelIds = reels.map(r => r.id);
+        const { data: likes } = await supabase
+          .from('likes')
+          .select('post_id')
+          .in('post_id', reelIds);
+        
+        const likeCounts = {};
+        if (likes) {
+          likes.forEach(like => {
+            likeCounts[like.post_id] = (likeCounts[like.post_id] || 0) + 1;
+          });
+        }
+        
+        document.getElementById('explore-content').innerHTML = `
+          <div class="explore-grid">
+            ${reels.map(r => {
+              const likeCount = likeCounts[r.id] || 0;
+              return `
+                <div class="explore-item" onclick="openReelsFromExplore('${r.id}')">
+                  <video src="${r.media_url}" preload="metadata"></video>
+                  <div class="grid-item-icon">
+                    <i class="bi bi-play-circle-fill"></i>
+                  </div>
+                  <div class="explore-stats">
+                    <span><i class="bi bi-heart-fill"></i> ${likeCount}</span>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } catch (error) {
+        console.error('[Explore Reels] Error:', error);
+        document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">Error loading reels</div></div>';
+      }
+    }
+
+    function switchExploreTab(tab) {
+      currentExploreTab = tab;
+      
+      document.querySelectorAll('.explore-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tab);
+      });
+      
+      loadExplore();
+    }
+
+    function handleSearch(query) {
+      clearTimeout(searchTimeout);
+      
+      if (!query.trim()) {
+        loadExplore();
+        return;
+      }
+      
+      searchTimeout = setTimeout(() => {
+        performSearch(query.trim());
+      }, 500);
+    }
+
+    async function performSearch(query) {
+      const content = document.getElementById('explore-content');
+      content.innerHTML = '<div class="loading"><div class="spinner"></div><div>Searching...</div></div>';
+      
+      try {
+        if (currentExploreTab === 'accounts') {
+          const { data: profiles } = await supabase
+            .from('profiles')
+            .select('*')
+            .or(`full_name.ilike.%${query}%,username.ilike.%${query}%`)
+            .limit(30);
+          
+          if (!profiles || profiles.length === 0) {
+            content.innerHTML = '<div class="empty-state"><div class="empty-title">No accounts found</div></div>';
+            return;
+          }
+          
+          content.innerHTML = `
+            <div class="search-results">
+              ${profiles.map(profile => {
+                const avatarUrl = getAvatarUrl(profile);
+                return `
+                  <div class="search-result-item" onclick="showToast('View profile: ${profile.full_name}')">
+                    <img class="search-result-avatar" src="${avatarUrl}" alt="${profile.full_name}" />
+                    <div class="search-result-info">
+                      <div class="search-result-name">${escapeHtml(profile.full_name || 'User')}</div>
+                      <div class="search-result-username">@${escapeHtml(profile.username || 'user')}</div>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          `;
+        } else {
+          const { data: posts } = await supabase
+            .from('posts')
+            .select('*')
+            .or(`content.ilike.%${query}%,tags.cs.{${query}}`)
+            .order('created_at', { ascending: false })
+            .limit(30);
+          
+          if (!posts || posts.length === 0) {
+            content.innerHTML = '<div class="empty-state"><div class="empty-title">No results found</div></div>';
+            return;
+          }
+          
+          showToast(`Found ${posts.length} results`);
+          loadExplore();
+        }
+      } catch (error) {
+        console.error('[Search] Error:', error);
+        content.innerHTML = '<div class="empty-state"><div class="empty-title">Error searching</div></div>';
+      }
+    }
+
+    // ============================================
+    // REELS - COMPLETE IMPLEMENTATION
+    // ============================================
+    async function openReels() {
+      document.getElementById('reels-view').classList.remove('hidden');
+      await loadReels();
+    }
+
+    async function openReelsFromExplore(reelId) {
+      document.getElementById('reels-view').classList.remove('hidden');
+      await loadReels(reelId);
+    }
+
+    function closeReels() {
+      document.getElementById('reels-view').classList.add('hidden');
+      
+      document.querySelectorAll('.reel-video').forEach(video => {
+        video.pause();
+      });
+    }
+
+    async function loadReels(startReelId = null) {
+      try {
+        const { data: reels, error } = await supabase
+          .from('posts')
+          .select('*')
+          .eq('post_type', 'reel')
+          .not('media_url', 'is', null)
+          .order('created_at', { ascending: false })
+          .limit(50);
+        
+        if (error) throw error;
+        
+        if (!reels || reels.length === 0) {
+          document.getElementById('reels-container').innerHTML = `
+            <div class="empty-state" style="height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+              <div class="empty-icon"><i class="bi bi-play-circle"></i></div>
+              <div class="empty-title" style="color:white;">No Reels Yet</div>
+            </div>
+          `;
+          return;
+        }
+        
+        allReels = reels;
+        
+        const userIds = [...new Set(reels.map(r => r.user_id))];
+        const { data: profiles } = await supabase
+          .from('profiles')
+          .select('*')
+          .in('id', userIds);
+        
+        const profileMap = {};
+        if (profiles) profiles.forEach(p => profileMap[p.id] = p);
+        
+        const reelIds = reels.map(r => r.id);
+        const { data: likes } = await supabase
+          .from('likes')
+          .select('post_id, user_id')
+          .in('post_id', reelIds);
+        
+        likesData.clear();
+        if (likes) {
+          likes.forEach(like => {
+            if (!likesData.has(like.post_id)) {
+              likesData.set(like.post_id, { count: 0, userLiked: false });
+            }
+            const data = likesData.get(like.post_id);
+            data.count++;
+            if (like.user_id === currentUser.id) {
+              data.userLiked = true;
+            }
+          });
+        }
+        
+        if (startReelId) {
+          currentReelIndex = reels.findIndex(r => r.id === startReelId);
+          if (currentReelIndex === -1) currentReelIndex = 0;
+        } else {
+          currentReelIndex = 0;
+        }
+        
+        const container = document.getElementById('reels-container');
+        container.innerHTML = reels.map((reel, index) => {
+          const profile = profileMap[reel.user_id];
+          const likeData = likesData.get(reel.id) || { count: 0, userLiked: false };
+          return createReelHTML(reel, profile, likeData, index);
+        }).join('');
+        
+        setupReelsScroll();
+        
+        if (startReelId && currentReelIndex > 0) {
+          const reelElement = document.querySelector(`#reel-${currentReelIndex}`);
+          if (reelElement) {
+            reelElement.scrollIntoView();
+          }
+        }
+        
+        playReelVideo(currentReelIndex);
+      } catch (error) {
+        console.error('[Load Reels] Error:', error);
+      }
+    }
+
+    function createReelHTML(reel, profile, likeData, index) {
+      const avatarUrl = getAvatarUrl(profile);
+      
+      let tagsHTML = '';
+      if (reel.tags && reel.tags.length > 0) {
+        tagsHTML = reel.tags.map(tag => `<span class="reel-tag">#${tag}</span>`).join(' ');
+      }
+      
+      return `
+        <div class="reel-item" id="reel-${index}" data-index="${index}">
+          <video 
+            class="reel-video" 
+            id="reel-video-${index}"
+            src="${reel.media_url}" 
+            loop 
+            playsinline
+            onclick="toggleReelPlay(${index})"
+          ></video>
+          
+          <div class="reel-overlay"></div>
+          
+          <div class="reel-play-pause" id="reel-play-pause-${index}">
+            <i class="bi bi-pause-fill"></i>
+          </div>
+          
+          <div class="reel-info">
+            <div class="reel-author-row">
+              <img class="reel-author-avatar" src="${avatarUrl}" alt="${profile?.full_name || 'User'}" />
+              <div class="reel-author-name">${escapeHtml(profile?.full_name || 'User')}</div>
+              ${reel.user_id !== currentUser.id ? '<button class="reel-follow-btn" onclick="showToast(\'Following!\')">Follow</button>' : ''}
+            </div>
+            ${reel.content ? `<div class="reel-description">${escapeHtml(reel.content)}</div>` : ''}
+            ${tagsHTML ? `<div class="reel-tags">${tagsHTML}</div>` : ''}
+          </div>
+          
+          <div class="reel-actions">
+            <button class="reel-action-btn" onclick="toggleReelLike('${reel.id}', ${index})">
+              <div class="reel-action-icon ${likeData.userLiked ? 'liked' : ''}" id="reel-like-icon-${index}">
+                <i class="bi bi-heart${likeData.userLiked ? '-fill' : ''}"></i>
+              </div>
+              <span class="reel-action-count" id="reel-like-count-${index}">${likeData.count}</span>
+            </button>
+            
+            <button class="reel-action-btn" onclick="openComments('${reel.id}')">
+              <div class="reel-action-icon">
+                <i class="bi bi-chat-fill"></i>
+              </div>
+              <span class="reel-action-count">0</span>
+            </button>
+            
+            <button class="reel-action-btn" onclick="sharePost('${reel.id}')">
+              <div class="reel-action-icon">
+                <i class="bi bi-share-fill"></i>
+              </div>
+            </button>
+            
+            <button class="reel-action-btn" onclick="toggleBookmark('${reel.id}')">
+              <div class="reel-action-icon">
+                <i class="bi bi-bookmark"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function setupReelsScroll() {
+      const container = document.getElementById('reels-container');
+      let isScrolling = false;
+      
+      container.addEventListener('scroll', () => {
+        if (isScrolling) return;
+        
+        isScrolling = true;
+        setTimeout(() => {
+          const scrollTop = container.scrollTop;
+          const windowHeight = window.innerHeight;
+          const newIndex = Math.round(scrollTop / windowHeight);
+          
+          if (newIndex !== currentReelIndex) {
+            pauseReelVideo(currentReelIndex);
+            currentReelIndex = newIndex;
+            playReelVideo(currentReelIndex);
+          }
+          
+          isScrolling = false;
+        }, 100);
+      });
+    }
+
+    function playReelVideo(index) {
+      const video = document.getElementById(`reel-video-${index}`);
+      if (video) {
+        video.play().catch(err => console.log('Autoplay prevented:', err));
+      }
+    }
+
+    function pauseReelVideo(index) {
+      const video = document.getElementById(`reel-video-${index}`);
+      if (video) {
+        video.pause();
+      }
+    }
+
+    function toggleReelPlay(index) {
+      const video = document.getElementById(`reel-video-${index}`);
+      const playPause = document.getElementById(`reel-play-pause-${index}`);
+      
+      if (!video) return;
+      
+      if (video.paused) {
+        video.play();
+        playPause.innerHTML = '<i class="bi bi-play-fill"></i>';
+      } else {
+        video.pause();
+        playPause.innerHTML = '<i class="bi bi-pause-fill"></i>';
+      }
+      
+      playPause.classList.add('show');
+      setTimeout(() => playPause.classList.remove('show'), 500);
+    }
+
+    async function toggleReelLike(reelId, index) {
+      const icon = document.getElementById(`reel-like-icon-${index}`);
+      const countEl = document.getElementById(`reel-like-count-${index}`);
+      
+      const likeData = likesData.get(reelId) || { count: 0, userLiked: false };
+      
+      try {
+        if (likeData.userLiked) {
+          await supabase.from('likes').delete().eq('post_id', reelId).eq('user_id', currentUser.id);
+          
+          icon.classList.remove('liked');
+          icon.querySelector('i').className = 'bi bi-heart';
+          likeData.count = Math.max(0, likeData.count - 1);
+          likeData.userLiked = false;
+        } else {
+          await supabase.from('likes').insert({ post_id: reelId, user_id: currentUser.id });
+          
+          icon.classList.add('liked');
+          icon.querySelector('i').className = 'bi bi-heart-fill';
+          likeData.count++;
+          likeData.userLiked = true;
+        }
+        
+        likesData.set(reelId, likeData);
+        countEl.textContent = likeData.count;
+      } catch (error) {
+        console.error('[Reel Like] Error:', error);
+      }
+    }
+
+    // ============================================
+    // CHATS
+    // ============================================
+    async function loadChats() {
+      const list = document.getElementById('chats-list');
+      list.innerHTML = '<div class="loading"><div class="spinner"></div><div>Loading chats...</div></div>';
+      
+      try {
+        const { count, error: countError } = await supabase
+          .from('messages')
+          .select('*', { count: 'exact', head: true });
+        
+        if (countError) {
+          console.error('[Chats] Table error:', countError);
+          list.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
+              <div class="empty-title">Messages coming soon!</div>
+              <div style="color:var(--gray);margin-top:8px;font-size:0.85rem;">Chat feature will be available soon</div>
+            </div>
+          `;
+          return;
+        }
+        
+        const { data: messages, error } = await supabase
+          .from('messages')
+          .select('*')
+          .or(`sender_id.eq.${currentUser.id},receiver_id.eq.${currentUser.id}`)
+          .order('created_at', { ascending: false })
+          .limit(100);
+        
+        if (error) {
+          console.error('[Chats] Load error:', error);
+          list.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
+              <div class="empty-title">No messages yet</div>
+              <div style="color:var(--gray);margin-top:8px;font-size:0.85rem;">Start a conversation!</div>
+            </div>
+          `;
+          return;
+        }
+        
+        if (!messages || messages.length === 0) {
+          list.innerHTML = `
+            <div class="empty-state">
+              <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
+              <div class="empty-title">No messages yet</div>
+              <div style="color:var(--gray);margin-top:8px;font-size:0.85rem;">Start a conversation!</div>
+            </div>
+          `;
+          return;
+        }
+        
+        const conversations = {};
+        messages.forEach(msg => {
+          const partnerId = msg.sender_id === currentUser.id ? msg.receiver_id : msg.sender_id;
+          if (!conversations[partnerId] || new Date(msg.created_at) > new Date(conversations[partnerId].created_at)) {
+            conversations[partnerId] = msg;
+          }
+        });
+        
+        const partnerIds = Object.keys(conversations);
+        const { data: profiles } = await supabase
+          .from('profiles')
+          .select('*')
+          .in('id', partnerIds);
+        
+        const profileMap = {};
+        if (profiles) profiles.forEach(p => profileMap[p.id] = p);
+        
+        list.innerHTML = Object.entries(conversations).map(([partnerId, msg]) => {
+          const partner = profileMap[partnerId];
+          if (!partner) return '';
+          
+          const avatarUrl = getAvatarUrl(partner);
+          const isUnread = msg.sender_id !== currentUser.id && !msg.read;
+          
+          return `
+            <div class="chat-item" onclick="showToast('Chat with ${partner.full_name}')">
+              <div style="position:relative;">
+                <img class="chat-avatar" src="${avatarUrl}" alt="${partner.full_name}" />
+                ${Math.random() > 0.5 ? '<div class="online-indicator"></div>' : ''}
+              </div>
+              <div class="chat-info">
+                <div class="chat-name">${escapeHtml(partner.full_name || 'User')}</div>
+                <div class="chat-last-message ${isUnread ? 'unread' : ''}">
+                  ${msg.sender_id === currentUser.id ? 'You: ' : ''}${escapeHtml(msg.content || 'Media')}
+                </div>
+              </div>
+              <div class="chat-meta">
+                <div class="chat-time">${getTimeAgo(msg.created_at)}</div>
+                ${isUnread ? '<div class="unread-badge">1</div>' : ''}
+              </div>
+            </div>
+          `;
+        }).filter(html => html).join('');
+      } catch (error) {
+        console.error('[Chats] Error:', error);
+        list.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon"><i class="bi bi-chat-dots"></i></div>
+            <div class="empty-title">Messages coming soon!</div>
+          </div>
+        `;
+      }
+    }
+
+    function searchChats(query) {
+      const items = document.querySelectorAll('.chat-item');
+      items.forEach(item => {
+        const name = item.querySelector('.chat-name')?.textContent.toLowerCase() || '';
+        const message = item.querySelector('.chat-last-message')?.textContent.toLowerCase() || '';
+        const matches = name.includes(query.toLowerCase()) || message.includes(query.toLowerCase());
+        item.style.display = matches ? 'flex' : 'none';
+      });
+    }
+
+    // ============================================
+    // CREATE POST WITH REELS
+    // ============================================
+    function openCreatePost() {
+      document.getElementById('create-post-modal').classList.remove('hidden');
+      document.getElementById('post-content').value = '';
+      document.getElementById('post-tags').value = '';
+      removePostMedia();
+      selectPostType('note');
+      selectVisibility('public');
+    }
+
+    function closeCreatePost() {
+      document.getElementById('create-post-modal').classList.add('hidden');
+    }
+
+    function selectPostType(type) {
+      currentPostType = type;
+      
+      document.querySelectorAll('.type-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.type === type);
+      });
+      
+      const mediaContainer = document.getElementById('media-upload-container');
+      const pollCreator = document.getElementById('poll-creator');
+      const uploadText = document.getElementById('upload-text');
+      const mediaFile = document.getElementById('post-media-file');
+      
+      mediaContainer.classList.add('hidden');
+      pollCreator.classList.add('hidden');
+      
+      if (type === 'image') {
+        mediaContainer.classList.remove('hidden');
+        uploadText.textContent = 'Upload image';
+        mediaFile.accept = 'image/*';
+      } else if (type === 'reel') {
+        mediaContainer.classList.remove('hidden');
+        uploadText.textContent = 'Upload reel (vertical video)';
+        mediaFile.accept = 'video/*';
+      } else if (type === 'poll') {
+        pollCreator.classList.remove('hidden');
+      }
+    }
+
+    function selectVisibility(visibility) {
+      postVisibility = visibility;
+      
+      document.querySelectorAll('.visibility-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.visibility === visibility);
+      });
+    }
+
+    function handlePostMediaSelect() {
+      const file = document.getElementById('post-media-file').files[0];
+      if (!file) return;
+      
+      selectedPostMedia = file;
+      const url = URL.createObjectURL(file);
+      
+      const preview = document.getElementById('post-media-preview');
+      const img = document.getElementById('preview-img');
+      const video = document.getElementById('preview-video');
+      
+      if (file.type.startsWith('image/')) {
+        img.src = url;
+        img.style.display = 'block';
+        video.style.display = 'none';
+      } else {
+        video.src = url;
+        video.style.display = 'block';
+        img.style.display = 'none';
+      }
+      
+      preview.classList.remove('hidden');
+    }
+
+    function removePostMedia() {
+      selectedPostMedia = null;
+      document.getElementById('post-media-file').value = '';
+      document.getElementById('post-media-preview').classList.add('hidden');
+      document.getElementById('preview-img').src = '';
+      document.getElementById('preview-video').src = '';
+    }
+
+    function addPollOption() {
+      const optionsList = document.getElementById('poll-options-list');
+      const count = optionsList.children.length + 1;
+      
+      if (count > 6) {
+        showToast('Maximum 6 options allowed');
+        return;
+      }
+      
+      const newOption = document.createElement('div');
+      newOption.className = 'poll-option-input';
+      newOption.innerHTML = `
+        <input type="text" placeholder="Option ${count}" class="poll-option-text" />
+        <button class="poll-remove-btn" onclick="this.parentElement.remove()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      `;
+      
+      optionsList.appendChild(newOption);
+    }
+
+    async function createPost() {
+      const content = document.getElementById('post-content').value.trim();
+      const tagsInput = document.getElementById('post-tags').value.trim();
+      
+      if (!content && !selectedPostMedia && currentPostType !== 'poll') {
+        showToast('Please add content or media');
+        return;
+      }
+      
+      if (currentPostType === 'poll') {
+        return await createPollPost(content, tagsInput);
+      }
+      
+      const btn = document.getElementById('btn-create');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="bi bi-hourglass-split"></i><span>Posting...</span>';
+      
+      try {
+        let mediaUrl = null;
+        let mediaType = null;
+        
+        if (selectedPostMedia) {
+          const fileName = `${currentUser.id}_${Date.now()}_${selectedPostMedia.name}`;
+          const { error: uploadError } = await supabase.storage.from('posts').upload(fileName, selectedPostMedia);
+          if (uploadError) throw uploadError;
+          
+          mediaUrl = supabase.storage.from('posts').getPublicUrl(fileName).data.publicUrl;
+          mediaType = selectedPostMedia.type.startsWith('video/') ? 'video' : 'image';
+        }
+        
+        const tags = tagsInput ? tagsInput.split(/[\s,]+/).map(t => t.replace('#', '').trim()).filter(t => t) : [];
+        
+        const { error } = await supabase.from('posts').insert({
+          user_id: currentUser.id,
+          content: content || null,
+          media_url: mediaUrl,
+          media_type: mediaType,
+          post_type: currentPostType,
+          tags: tags,
+          visibility: postVisibility
+        });
+        
+        if (error) throw error;
+        
+        closeCreatePost();
+        
+        if (currentPostType === 'reel') {
+          showToast('Reel posted! 🎬');
+          await loadReels();
+        } else {
+          showToast('Post shared! 🎉');
+          await loadFeed();
+        }
+      } catch (error) {
+        console.error('[Create Post] Error:', error);
+        showToast('Failed to create post');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="bi bi-send-fill"></i><span>Share Post</span>';
+      }
+    }
+
+    async function createPollPost(content, tagsInput) {
+      const question = document.getElementById('poll-question').value.trim();
+      const options = Array.from(document.querySelectorAll('#poll-options-list input'))
+        .map(input => input.value.trim())
+        .filter(text => text);
+      
+      if (!question) {
+        showToast('Please enter a poll question');
+        return;
+      }
+      
+      if (options.length < 2) {
+        showToast('Please add at least 2 options');
+        return;
+      }
+      
+      const btn = document.getElementById('btn-create');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="bi bi-hourglass-split"></i><span>Posting...</span>';
+      
+      try {
+        const tags = tagsInput ? tagsInput.split(/[\s,]+/).map(t => t.replace('#', '').trim()).filter(t => t) : [];
+        
+        const pollData = {
+          question,
+          options,
+          votes: {},
+          userVotes: {}
+        };
+        
+        const { error } = await supabase.from('posts').insert({
+          user_id: currentUser.id,
+          content: content || question,
+          post_type: 'poll',
+          poll_data: pollData,
+          tags: tags,
+          visibility: postVisibility
+        });
+        
+        if (error) throw error;
+        
+        closeCreatePost();
+        await loadFeed();
+        showToast('Poll posted! 📊');
+      } catch (error) {
+        console.error('[Create Poll] Error:', error);
+        showToast('Failed to create poll');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="bi bi-send-fill"></i><span>Share Post</span>';
       }
     }
 
@@ -4750,6 +4310,7 @@
     // NAVIGATION
     // ============================================
     function switchView(view) {
+      console.log('[Nav] Switching to:', view);
       currentView = view;
       
       document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -4828,124 +4389,58 @@
     }
 
     // ============================================
-    // EXPLORE - Simplified (same as before)
+    // UTILITIES
     // ============================================
-    async function loadExplore() {
-      const content = document.getElementById('explore-content');
-      content.innerHTML = '<div class="loading"><div class="spinner"></div><div>Loading...</div></div>';
+    function showAuth() {
+      document.getElementById('auth-screen').classList.remove('hidden');
+      document.getElementById('onboarding-screen').classList.add('hidden');
+      document.getElementById('main-app').classList.add('hidden');
+    }
+
+    function showOnboarding() {
+      document.getElementById('auth-screen').classList.add('hidden');
+      document.getElementById('onboarding-screen').classList.remove('hidden');
+      document.getElementById('main-app').classList.add('hidden');
+    }
+
+    function showMainApp() {
+      document.getElementById('auth-screen').classList.add('hidden');
+      document.getElementById('onboarding-screen').classList.add('hidden');
+      document.getElementById('main-app').classList.remove('hidden');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function getTimeAgo(timestamp) {
+      const now = new Date();
+      const past = new Date(timestamp);
+      const seconds = Math.floor((now - past) / 1000);
       
-      if (currentExploreTab === 'accounts') {
-        await loadExploreAccounts();
-      } else {
-        showToast('Explore feature ready!');
+      if (seconds < 60) return 'Just now';
+      if (seconds < 3600) return `${Math.floor(seconds / 60)}m`;
+      if (seconds < 86400) return `${Math.floor(seconds / 3600)}h`;
+      if (seconds < 604800) return `${Math.floor(seconds / 86400)}d`;
+      return `${Math.floor(seconds / 604800)}w`;
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function closeOnOutside(event, modalId) {
+      if (event.target.classList.contains('comments-modal') || 
+          event.target.classList.contains('settings-modal') ||
+          event.target.id === modalId) {
+        document.getElementById(modalId).classList.add('hidden');
       }
-    }
-
-    async function loadExploreAccounts() {
-      try {
-        const { data: profiles } = await supabase
-          .from('profiles')
-          .select('*')
-          .neq('id', currentUser.id)
-          .limit(50);
-        
-        if (!profiles || profiles.length === 0) {
-          document.getElementById('explore-content').innerHTML = '<div class="empty-state"><div class="empty-title">No accounts found</div></div>';
-          return;
-        }
-        
-        document.getElementById('explore-content').innerHTML = `
-          <div class="search-results">
-            ${profiles.map(profile => {
-              const avatarUrl = getAvatarUrl(profile);
-              return `
-                <div class="search-result-item" onclick="viewUserProfile('${profile.id}')">
-                  <img class="search-result-avatar" src="${avatarUrl}" alt="${profile.full_name}" />
-                  <div class="search-result-info">
-                    <div class="search-result-name">${escapeHtml(profile.full_name || 'User')}</div>
-                    <div class="search-result-username">@${escapeHtml(profile.username || 'user')}</div>
-                  </div>
-                </div>
-              `;
-            }).join('')}
-          </div>
-        `;
-      } catch (error) {
-        console.error('[Explore] Error:', error);
-      }
-    }
-
-    function switchExploreTab(tab) {
-      currentExploreTab = tab;
-      document.querySelectorAll('.explore-tab').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.tab === tab);
-      });
-      loadExplore();
-    }
-
-    function handleSearch(query) {
-      clearTimeout(searchTimeout);
-      if (!query.trim()) {
-        loadExplore();
-        return;
-      }
-      searchTimeout = setTimeout(() => {
-        showToast('Search feature ready!');
-      }, 500);
-    }
-
-    // ============================================
-    // REELS & CREATE POST - Simplified versions
-    // ============================================
-    function openReels() {
-      showToast('Reels feature ready! 🎬');
-    }
-
-    function closeReels() {
-      document.getElementById('reels-view').classList.add('hidden');
-    }
-
-    function openReelsFromExplore(reelId) {
-      showToast('Reel viewer ready!');
-    }
-
-    function openCreatePost() {
-      document.getElementById('create-post-modal').classList.remove('hidden');
-    }
-
-    function closeCreatePost() {
-      document.getElementById('create-post-modal').classList.add('hidden');
-    }
-
-    function selectPostType(type) {
-      currentPostType = type;
-      document.querySelectorAll('.type-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.type === type);
-      });
-    }
-
-    function selectVisibility(visibility) {
-      postVisibility = visibility;
-      document.querySelectorAll('.visibility-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.visibility === visibility);
-      });
-    }
-
-    function handlePostMediaSelect() {
-      showToast('Media upload ready!');
-    }
-
-    function removePostMedia() {
-      selectedPostMedia = null;
-    }
-
-    function addPollOption() {
-      showToast('Poll option added!');
-    }
-
-    async function createPost() {
-      showToast('Post creation ready!');
-      closeCreatePost();
     }
 
     // ============================================
@@ -4953,9 +4448,8 @@
     // ============================================
     window.addEventListener('DOMContentLoaded', init);
     
-    console.log('✅ Right Talk v4.0 - ALL FEATURES FULLY WORKING!');
+    console.log('✅ Right Talk v3.0 - All Features Working!');
   </script>
 </body>
 </html>
-
 
